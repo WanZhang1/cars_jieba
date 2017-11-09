@@ -9,7 +9,6 @@ import jieba.analyse
 
 
 
-#获取文档内容
 #读取文档内容
 f = open("../../../file/9.21机车玻璃破损信息.docx", 'rb')
 
