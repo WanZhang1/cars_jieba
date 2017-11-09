@@ -6,3 +6,8 @@
  
  pip install python-docx
  
+# jieba RESTful接口开发
+
+ 需要安装python包Flask
+
+ pip install flask
