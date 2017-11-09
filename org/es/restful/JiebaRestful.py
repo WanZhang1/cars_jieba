@@ -6,19 +6,8 @@ import jieba
 
 app = Flask(__name__)
 
+
 @app.route('/jieba_parse/', methods=['POST'])
-def jieba_parse():
-    if not request.json or 'text' not in request.json :
-        abort(400)
-    text=request.json['text']
-    seg_list = jieba.cut(text, cut_all=False)
-    seg = " ".join(seg_list)
-    print( seg)
-    
-    return jsonify({'result': seg})
-
-
-@app.route('/user_dict/', methods=['POST'])
 def user_dict():
 	if not request.json or 'text' not in request.json:
 		abort(400)
