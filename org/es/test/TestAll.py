@@ -10,7 +10,7 @@ import jieba.analyse
 
 
 #读取文档内容
-f = open("../../../file/9.21机车玻璃破损信息.docx", 'rb')
+f = open("../../../file/9.17护网内有行人情况.docx", 'rb')
 
 fullText = f.read()
 
@@ -76,22 +76,3 @@ print('-'*40)
 
 for x, w in jieba.analyse.textrank(fullText, withWeight=True):
     print('%s %s' % (x, w))
-
-
-print('='*40)
-print('5. Tokenize: 返回词语在原文的起止位置')
-print('-'*40)
-print(' 默认模式')
-
-print('-'*40)
-result = jieba.tokenize(fullText)
-for tk in result:
-    print("word %s\t\t start: %d \t\t end:%d" % (tk[0],tk[1],tk[2]))
-
-print('-'*40)
-print(' 搜索模式')
-print('-'*40)
-
-result = jieba.tokenize(fullText, mode='search')
-for tk in result:
-    print("word %s\t\t start: %d \t\t end:%d" % (tk[0],tk[1],tk[2]))
