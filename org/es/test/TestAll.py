@@ -6,18 +6,16 @@ sys.path.append("../")
 import jieba
 import jieba.posseg
 import jieba.analyse
-from docx import Document
 
-def readDocx(docName):
-    fullText = []
-    doc = Document(docName)
-    paras = doc.paragraphs
-    for p in paras:
-        fullText.append(p.text)
-    return '\n'.join(fullText)
+
 
 #获取文档内容
-fullText = readDocx('../../../file/7.26.docx')
+#读取文档内容
+f = open("../../../file/9.21机车玻璃破损信息.docx", 'rb')
+
+fullText = f.read()
+
+f.close()
 
 #自定义词典
 jieba.load_userdict("../../../file/accidentDepart.dat")
