@@ -17,6 +17,8 @@ jieba.load_userdict("../../../file/originAccidentLocale.dat")
 # 铁路专业词典
 jieba.load_userdict("../../../file/general.dat")
 jieba.load_userdict("../../../file/railDictionary.dat")
+# 铁路客运站点
+jieba.load_userdict("../../../file/stationDictionary.dat")
 
 #单个文本
 @app.route('/jieba_parse', methods=['POST'])
