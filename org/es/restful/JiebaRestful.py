@@ -20,7 +20,9 @@ jieba.load_userdict("../../../file/railDictionary.dat")
 # 铁路客运站点
 jieba.load_userdict("../../../file/stationDictionary.dat")
 # 货运线路
-jieba.load_userdict("../../../file/freigtLine.dat")
+jieba.load_userdict("../../../file/freightLine.dat")
+# 货运站点
+jieba.load_userdict("../../../file/freightStation.dat")
 
 #单个文本
 @app.route('/jieba_parse', methods=['POST'])
